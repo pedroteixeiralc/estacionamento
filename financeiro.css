@@ -10,9 +10,10 @@ body {
   padding: 0;
 }
 
-.sidebar {
+/* Menu de Navegação */
+.nav-menu {
   height: 100%;
-  width: 200px;
+  width: 250px; /* Aumentado para 250px para melhor visualização */
   position: fixed;
   z-index: 1;
   top: 0;
@@ -23,30 +24,29 @@ body {
   transition: 0.5s;
 }
 
-.sidebar a {
-  padding: 35px 35px 35px 36px;
+.nav-menu a {
+  padding: 20px 20px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px; /* Ajustado para ser um pouco menor */
   color: #818181;
   display: block;
   transition: 0.3s;
 }
 
-.sidebar a:hover {
+.nav-menu a:hover {
   color: #f1f1f1;
 }
 
 .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  right: 20px;
+  font-size: 30px; /* Ajustado para combinar melhor com o tamanho da fonte dos links */
 }
 
-/* Conteúdo principal */
-#main {
-  margin-left: 200px;
+/* Conteúdo Principal */
+.main-content {
+  margin-left: 250px; /* Ajustado para alinhar com a largura do menu */
   padding: 20px;
 }
 
@@ -56,15 +56,15 @@ h1 {
   margin-bottom: 20px;
 }
 
-.content-container {
+/* Container do Conteúdo */
+.container {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: calc(100% - 240px); /* Ajusta a largura considerando a sidebar */
-  max-width: 800px;          /* Limita a largura máxima */
+  width: calc(100% - 270px); /* Ajusta a largura considerando o menu e margem */
+  max-width: 900px;          /* Limita a largura máxima */
   margin: 20px auto 0;       /* Centraliza horizontalmente e adiciona margem superior */
-  margin-left: 200px;        /* Considera o espaço da sidebar */
 }
 
 /* Tabelas */
@@ -85,7 +85,7 @@ th, td {
 }
 
 th {
-  background-color: #fff; /* Define o fundo dos cabeçalhos como branco */
+  background-color: #f4f4f4; /* Define o fundo dos cabeçalhos como cinza claro */
 }
 
 /* Botões */
@@ -107,11 +107,11 @@ th {
 
 /* Ajuste para impressão */
 @media print {
-  .sidebar, .button {
+  .nav-menu, .button {
     display: none;
   }
 
-  #main {
+  .main-content {
     margin: 0;
     padding: 0;
   }

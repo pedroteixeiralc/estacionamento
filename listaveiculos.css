@@ -1,30 +1,98 @@
+/* Estilo básico do container */
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto; /* Ajustado para adicionar margem superior */
   padding: 20px;
   text-align: center;
+  background-color: #fff; /* Adicionando cor de fundo para o container */
+  border-radius: 10px; /* Borda arredondada para um visual mais suave */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar o container */
 }
 
+/* Estilo dos itens de veículo */
 .vehicle-item {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   background-color: #f9f9f9;
+  text-align: left; /* Alinhamento do texto à esquerda dentro do item */
 }
 
+/* Margens dos parágrafos dentro dos itens de veículo */
 .vehicle-item p {
   margin: 5px 0;
 }
 
+/* Estilo dos botões */
 button {
   margin: 5px;
-  padding: 5px 10px;
+  padding: 8px 16px; /* Ajustado para botões um pouco maiores */
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+  background-color: #105F71; /* Cor de fundo padrão para botões */
+  color: white; /* Cor do texto dos botões */
+  font-size: 14px; /* Tamanho da fonte dos botões */
 }
 
+/* Estilo dos botões ao passar o mouse */
 button:hover {
-  background-color: #ddd;
+  background-color: #0a4d6a; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilo do container da lista de veículos */
+.vehicle-list {
+  max-height: 300px; /* Ajustado para permitir mais itens visíveis */
+  overflow-y: auto; /* Adiciona rolagem se o conteúdo exceder a altura máxima */
+  margin-bottom: 20px; /* Espaço inferior para separar de outros elementos */
+}
+
+/* Estilo para a seção de busca de veículos */
+.search-section {
+  margin-bottom: 20px; /* Espaço inferior para separar da lista de veículos */
+}
+
+.search-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Estilo do campo de busca e botão na seção de busca */
+#searchPlate {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 120px); /* Ajusta a largura do campo de busca */
+  font-size: 14px;
+  margin-right: 10px; /* Espaço à direita do campo de busca para o botão */
+}
+
+#searchVehicleBtn {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#searchVehicleBtn:hover {
+  background-color: #105F71;
+}
+
+/* Estilo do botão para visualização de relatórios */
+#viewReportBtn {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#viewReportBtn:hover {
+  background-color: #105F71;
 }
