@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Veículos - AutoPark</title> <!-- Alterado o título da página -->
+  <link rel="stylesheet" href="../assets/main.css"> <!-- Alterado o nome do arquivo CSS de styles.css para main.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div id="navMenu" class="nav-menu">
+    <!-- Alterado o ID e o nome da classe de "sidebar" para "nav-menu" -->
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a> <!-- Alterado o método de "closeNav()" para "toggleNav()" -->
+    <a href="home.html"><i class="fas fa-home"></i> Página Inicial</a> <!-- Alterado de index.html para home.html e o texto para "Página Inicial" -->
+    <a href="registered-vehicles.html"><i class="fas fa-list"></i> Veículos Registrados</a> <!-- Alterado de listaveiculos-cadastrados.html para registered-vehicles.html -->
+    <a href="search.html"><i class="fas fa-search"></i> Buscar Veículos</a> <!-- Alterado de pesquisa.html para search.html -->
+    <a href="billing.html"><i class="fas fa-credit-card"></i> Faturamento</a> <!-- Alterado de pagamento.html para billing.html -->
+    <a href="reports.html"><i class="fas fa-file-alt"></i> Relatórios</a> <!-- Alterado de relatorio.html para reports.html -->
+  </div>
+
+  <div class="main-content">
+    <!-- Alterado a classe de "container" para "main-content" -->
+    <h1>Veículos Registrados</h1> <!-- Alterado o título principal para "Veículos Registrados" -->
+    <div id="vehiclesContainer"></div> <!-- Alterado o ID de "veiculos-list" para "vehiclesContainer" -->
+  </div>
+
+  <script src="../js/vehicles.js"></script> <!-- Alterado o nome do arquivo JavaScript de veiculosCadastrados.js para vehicles.js -->
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('navMenu');
+      if (nav.style.width === '0px' || nav.style.width === '') {
+        nav.style.width = '250px';
+      } else {
+        nav.style.width = '0px';
+      }
+    }
+  </script>
+</body>
+</html>

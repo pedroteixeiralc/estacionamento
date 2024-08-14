@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Estacionamento - AutoPark</title> <!-- Alterado o título da página -->
+  <link rel="stylesheet" href="../assets/reset.css"> <!-- Alterado de resert.css para reset.css -->
+  <link rel="stylesheet" href="../assets/main.css"> <!-- Alterado de styles.css para main.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div id="menu" class="menu">
+    <!-- Alterado o ID e o nome da classe de "sidebar" para "menu" -->
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">×</a> <!-- Alterado o método de "closeNav()" para "toggleMenu()" -->
+    <a href="home.html"><i class="fas fa-home"></i> Home</a> <!-- Alterado de index.html para home.html e o texto para "Home" -->
+    <a href="registered-vehicles.html"><i class="fas fa-car"></i> Veículos Registrados</a> <!-- Alterado de listaveiculos-cadastrados.html para registered-vehicles.html -->
+    <a href="find-vehicles.html"><i class="fas fa-search"></i> Encontrar Veículos</a> <!-- Alterado de pesquisa.html para find-vehicles.html -->
+    <a href="billing.html"><i class="fas fa-credit-card"></i> Faturamento</a> <!-- Alterado de pagamento.html para billing.html -->
+    <a href="reports.html"><i class="fas fa-file-alt"></i> Relatórios</a> <!-- Alterado de relatorio.html para reports.html -->
+    <a href="financial.html"><i class="fas fa-wallet"></i> Finanças</a> <!-- Alterado o ícone e o texto para "Finanças" -->
+  </div>
+
+  <div id="main-content">
+    <!-- Alterado o ID de "main" para "main-content" -->
+    <div class="wrapper">
+      <figure>
+        <img src="../assets/parking-icon.png" alt="Ícone de estacionamento" style="width:24px;height:auto;" title="Logo AutoPark"> <!-- Alterado o nome do arquivo da imagem e o estilo -->
+      </figure>
+      <h1>Gestão de Estacionamento</h1> <!-- Alterado o título para "Gestão de Estacionamento" -->
+
+      <div class="form-group">
+        <label class="form-label" for="brandModel">Marca/Modelo</label>
+        <input id="brandModel" type="text" placeholder="Marca/Modelo"> <!-- Alterado o ID e o texto de placeholder -->
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="licensePlate">Placa</label>
+        <input id="licensePlate" type="text" placeholder="Placa"> <!-- Alterado o ID e o texto de placeholder -->
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="color">Cor</label>
+        <input id="color" type="text" placeholder="Cor do Veículo"> <!-- Alterado o ID e o texto de placeholder -->
+      </div>
+      
+      <button id="addVehicle" class="btn">Adicionar Veículo</button> <!-- Alterado o ID e a classe do botão -->
+      <div id="vehicleList" class="vehicle-list"></div>
+    
+    </div>
+    <div id="status-info" class="status-info">
+      <!-- Alterado o ID e o nome da classe de "top-info" para "status-info" -->
+      <p>Vagas Livres: <span id="freeSpaces"></span></p> <!-- Alterado o texto e o ID -->
+      <p>Vagas Ocupadas: <span id="occupiedSpaces"></span></p> <!-- Alterado o texto e o ID -->
+    </div>
+
+    <div class="wrapper">
+      <div class="search-section">
+        <h2>Buscar Veículos</h2>
+        <input type="text" id="searchPlate" placeholder="Buscar por Placa..."> <!-- Alterado o ID e o texto de placeholder -->
+        <button id="searchVehicleBtn" class="btn">Buscar</button> <!-- Alterado o ID e a classe do botão -->
+      </div>
+      <div id="searchResultsContainer">
+        <div id="searchResults"></div> <!-- Alterado o ID -->
+      </div>
+      <button id="viewReportBtn" class="btn" onclick="window.location.href='reports.html';">Relatórios</button> <!-- Alterado o ID e o texto do botão -->
+
+      <h2>Veículos Registrados</h2>
+      <div id="registeredVehiclesList">
+        <ul id="vehiclesRegistered"></ul> <!-- Alterado o ID -->
+      </div>
+      <div id="vehicleDetailsContainer" class="details-container"></div> <!-- Alterado o ID e a classe -->
+      <a href="registered-vehicles.html" class="btn">Veículos Registrados</a> <!-- Alterado o link e o texto do botão -->
+    </div>
+    <div id="vehicleDetailsContainer" class="details-container"></div> <!-- Removido duplicado -->
+    
+    <script src="../js/management.js"></script> <!-- Alterado de autopark.js para management.js -->
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      if (menu.style.width === '0px' || menu.style.width === '') {
+        menu.style.width = '250px';
+      } else {
+        menu.style.width = '0px';
+      }
+    }
+  </script>
+</body>
+</html>

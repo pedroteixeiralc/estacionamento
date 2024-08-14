@@ -1,0 +1,118 @@
+/* Estilo geral do corpo */
+body {
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+  height: 100vh;
+  background-color: #105F71;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s;
+}
+
+.sidebar a {
+  padding: 35px 35px 35px 36px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Conteúdo principal */
+#main {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(17, 16, 16);
+  margin-bottom: 20px;
+}
+
+.content-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 240px); /* Ajusta a largura considerando a sidebar */
+  max-width: 800px;          /* Limita a largura máxima */
+  margin: 20px auto 0;       /* Centraliza horizontalmente e adiciona margem superior */
+  margin-left: 200px;        /* Considera o espaço da sidebar */
+}
+
+/* Tabelas */
+table {
+  width: 100%; /* Ocupar 100% da largura disponível */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff; /* Define o fundo da tabela como branco */
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #fff; /* Define o fundo dos cabeçalhos como branco */
+}
+
+/* Botões */
+.button {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #105F71;
+}
+
+/* Ajuste para impressão */
+@media print {
+  .sidebar, .button {
+    display: none;
+  }
+
+  #main {
+    margin: 0;
+    padding: 0;
+  }
+}
